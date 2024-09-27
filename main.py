@@ -9,12 +9,14 @@ def calculateDays():
     days_in_year = 365 if not calendar.isleap(today.year) else 366
     days_left = (last_day_of_year - today).days
     days_into_year = (today - datetime.datetime(today.year, 1, 1).date()).days
+    day_to_thanksgiving = (datetime.datetime(today.year, 11, 25).date() - today).days       
     days_to_christmas = (datetime.datetime(today.year, 12, 25).date() - today).days 
     print(f"today is: {today}")
     print(f"the last day of the year is: {last_day_of_year}")
     print(f"days in this year: {days_in_year}")
     print(f"days into year: {days_into_year}")
     print(f"days left: {days_left}")
+    print(f"days to thanksgiving: {day_to_thanksgiving}")
     print(f"days to christmas: {days_to_christmas}")    
     
 
